@@ -87,9 +87,9 @@ elif analysis == "Goal Distribution (Home vs Away)":
 
 
 elif analysis == "Top Assist Providers":
-    assisted_shots = filtered_df[['player_assisted', 'xG']].dropna(subset=['player_assisted'])
-    assist_stats = assisted_shots.groupby('player_assisted').agg(
-        assists=('player_assisted', 'count'),
+    assisted_shots = filtered_df[['assisted', 'xG']].dropna(subset=['assisted'])
+    assist_stats = assisted_shots.groupby('assisted').agg(
+        assists=('assisted', 'count'),
         avg_xG=('xG', 'mean')
     ).sort_values('assists', ascending=False).head(10)
     fig, ax = plt.subplots(figsize=(10, 5))
