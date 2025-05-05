@@ -9,7 +9,7 @@ import numpy as np
 sns.set(style="whitegrid")
 
 def load_data():
-    return pd.read_excel("C:\\Users\\ahmed\\Downloads\\salah_shots.xlsx")
+    return pd.read_excel("salah_shots.xlsx")
 
 df = load_data()
 
